@@ -1,4 +1,4 @@
-module test
+module github.com/prabeeen/grpc-micro
 
 go 1.21.3
 
