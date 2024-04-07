@@ -1,16 +1,22 @@
 syntax = "proto3";
 
-option go_package = "test/order/";
+option go_package = "github.com/prabeeen/grpc-micro/order/";
 
 package order;
 
-service Greeter {
-    rpc SayHello(HelloRequest) returns (HelloReply) {}
+service Order {
+    rpc Create(CreateOrderRequest) returns (CreateOrderReply) {}
 }
-message HelloRequest {
+message CreateOrderRequest {
+    int64 user_id = 1;
+    repeated Item items = 2;
+    float total_price = 3;
+}
+
+message Item {
     string name = 1;
 }
 
-message HelloReply {
-    string name = 1;
+message CreateOrderReply {
+    int64 order_id = 1;
 }
