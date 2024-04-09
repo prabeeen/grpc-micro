@@ -1,4 +1,4 @@
-module github.com/prabeeen/grpc-micro
+module github.com/prabeeen/grpc-micro/golang/order
 
 go 1.21.3
 
