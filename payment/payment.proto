@@ -5,7 +5,10 @@ option go_package = "github.com/prabeeen/grpc-micro/payment/";
 package payment;
 
 message CreatePaymentRequest {
-    float price = 1;
+   int64 user_id = 1;
+   int64 order_id = 2;
+   float total_price = 3;
+
 }
 
 message CreatePaymentReply {
