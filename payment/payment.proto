@@ -3,3 +3,15 @@ syntax = "proto3";
 option go_package = "github.com/prabeeen/grpc-micro/payment/";
 
 package payment;
+
+message CreatePaymentRequest {
+    float price = 1;
+}
+
+message CreatePaymentReply {
+    int64 bill_id = 1;
+}
+
+service Payment {
+    rpc Create(CreatePaymentRequest) returns (CreatePaymentReply) {}
+}
